@@ -1,8 +1,8 @@
 {
-  "name": "is219hello",
+  "name": "is219",
   "version": "1.0.0",
   "description": "My First Node App",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "jest",
     "start": "node src/index.js",
@@ -10,8 +10,8 @@
     "coveralls": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls"
   },
   "keywords": [],
-  "author": "Keith Williams",
-  "email": "keith@webizly.com",
+  "author": "Yu-Ching Tseng",
+  "email": "yt249@njit.edu",
   "license": "ISC",
   "dependencies": {
     "@types/lodash": "^4.14.168",
