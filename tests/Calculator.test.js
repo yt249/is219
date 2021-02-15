@@ -4,7 +4,7 @@ test('Calculator adding two numbers', () => {
     let result = Calculator.Sum(1,2);
     expect(result.GetResults()).toBe(3);
 });
-test('Calculator difference between two numbers', () => {
+test('Calculator difference of two numbers', () => {
     let result = Calculator.Difference(1,2);
     expect(result.GetResults()).toBe(-1);
 });
@@ -15,6 +15,14 @@ test('Calculator product of two numbers', () => {
 test('Calculator quotient of two numbers', () => {
     let result = Calculator.Quotient(1,2);
     expect(result.GetResults()).toBe(.5);
+});
+test('Calculator Root of two numbers', () => {
+    let result = Calculator.Root(4,2);
+    expect(result.GetResults()).toBe(2);
+});
+test('Calculator Power of two numbers', () => {
+    let result = Calculator.Power(2,2);
+    expect(result.GetResults()).toBe(4);
 });
 test('Calculator adding to calculations', () => {
     let result = Calculator.Quotient(1,2);
