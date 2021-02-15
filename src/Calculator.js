@@ -6,28 +6,37 @@ const Quotient = require('./Operations/Quotient');
 
 class Calculator {
     static Calculations = [];
-    static Sum(a,b) {
-        let calculation = new Calculation(a,b,Sum);
+
+    static addCalculation(calculation){
         Calculator.Calculations.push(calculation);
-        return calculation.GetResults();
+    }
+
+    static getLastCalculation(){
+        return this.Calculations[this.Calculations.length - 1];
+    }
+
+    static Sum(a,b) {
+        let calculation = Calculation.Create(a,b,Sum);
+        this.addCalculation(calculation);
+        return calculation;
     }
 
     static Difference(a,b) {
-        let calculation = new Calculation(a,b,Difference);
-        Calculator.Calculations.push(calculation);
-        return calculation.GetResults();
+        let calculation = Calculation.Create(a,b,Difference);
+        this.addCalculation(calculation);
+        return calculation;
     }
 
     static Product(a,b) {
-        let calculation = new Calculation(a,b,Product);
-        Calculator.Calculations.push(calculation);
-        return calculation.GetResults();
+        let calculation = Calculation.Create(a,b,Product);
+        this.addCalculation(calculation);
+        return calculation;
     }
 
     static Quotient(a,b) {
-        let calculation = new Calculation(a,b,Quotient);
-        Calculator.Calculations.push(calculation);
-        return calculation.GetResults();
+        let calculation = Calculation.Create(a,b,Quotient);
+        this.addCalculation(calculation);
+        return calculation;
     }
 
 }
