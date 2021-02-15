@@ -1,11 +1,11 @@
-const Calculation = require('./Models/Calculation')
+const Calculation = require('./Models/Calculation');
 const Sum = require('./Operations/Sum');
 const Difference = require('./Operations/Difference');
 const Product = require('./Operations/Product');
 const Quotient = require('./Operations/Quotient');
 
 class Calculator {
-    static Calculations = []
+    static Calculations = [];
     static Sum(a,b) {
         let calculation = new Calculation(a,b,Sum);
         Calculator.Calculations.push(calculation);
