@@ -25,7 +25,6 @@ test('Calculator Power of two numbers', () => {
     expect(result.GetResults()).toBe(4);
 });
 test('Calculator adding to calculations', () => {
-    let result = Calculator.Quotient(1,2);
     let calculations = Calculator.Calculations
     calculations.forEach(function (calc) {
         console.log(calc.GetResults())
