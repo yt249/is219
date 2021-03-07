@@ -25,7 +25,7 @@ test('Calculator Power of two numbers', () => {
     expect(result.GetResults()).toBe(4);
 });
 test('Calculator adding to calculations', () => {
-    let calculations = Calculator.Calculations
+    let calculations = Calculator.Calculations;
     calculations.forEach(function (calc) {
         console.log(calc.GetResults())
     });
@@ -34,4 +34,18 @@ test('Calculator Get Last Calculation', () => {
     Calculator.Product(1,2);
     let CalculationObject = Calculator.getLastCalculation();
     expect(CalculationObject.GetResults()).toBe(2);
+});
+test('Calculator ClearHistory', () => {
+    Calculator.Sum(1,2);
+    Calculator.Clear();
+    expect(Calculator.Calculations.length).toBe(0);
+});
+
+test('Calculator Copy()', () => {
+    Calculator.Clear();
+    Calculator.Root(9);
+    Calculator.Power(2);
+    Calculator.Sum(4,2);
+    let newCalc = Calculator.Copy();
+    expect(newCalc.Calculations).toBe(Calculator.Calculations);
 });

@@ -50,6 +50,14 @@ class Calculator {
         this.addCalculation(calculation);
         return calculation;
     }
+    static Clear(){
+        this.Calculations = [];
+    }
+    static Copy() {
+        let newCalc = new Calculator();
+        newCalc.Calculations = this.Calculations;
+        return newCalc;
+    }
 
 }
 module.exports = Calculator;
